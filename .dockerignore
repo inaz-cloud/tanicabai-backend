@@ -1,9 +1,6 @@
 # Dataset — besar, tidak perlu masuk image
 datasets/
 
-# Model — di-mount via volume, tidak perlu masuk image
-models/
-
 # Environment
 .env
 
