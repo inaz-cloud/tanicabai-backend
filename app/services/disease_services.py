@@ -68,7 +68,7 @@ MODEL_DIR = os.path.join(ROOT_DIR, "models")
 # =========================================================
 
 POSSIBLE_MODELS = [
-    "modeldeteksi_fixed.keras"
+    "modeldeteksi_fixed.keras",
     "best_model.keras",
     "modeldeteksi.keras",
     "model.keras",
