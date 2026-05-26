@@ -1,0 +1,24 @@
+# Dataset & gambar training
+datasets/
+split/
+data/
+
+# Script training (tidak dibutuhkan server)
+export_savemodel.py
+merge_kaggle.py
+train_disease.py
+train_lstm.py
+scraper_harga.py
+
+# Python cache
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environment (rahasia!)
+.env
+
+# OS
+Thumbs.db
+.DS_Store

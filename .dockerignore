@@ -1,0 +1,31 @@
+# Dataset — besar, tidak perlu masuk image
+datasets/
+
+# Model — di-mount via volume, tidak perlu masuk image
+models/
+
+# Environment
+.env
+
+# Git
+.git
+.gitignore
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Log
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

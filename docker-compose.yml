@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  backend:
+    build: .
+
+    container_name: backend_cabai
+
+    ports:
+      - "8000:8000"
+
+    env_file:
+      - .env
+
+    volumes:
+      # [FIX] Jangan mount seluruh project (. : /app)
+      # karena akan override node_modules / cache di dalam container.
+      # Mount hanya folder yang perlu live-reload atau data eksternal.
+
+      # Source code app (untuk development — hapus di production)
+      - ./app:/app/app
+
+      # Model ML (di luar image, tidak perlu rebuild Docker saat retrain)
+      - ./models:/app/models
+
+      # Data CSV historis harga
+      - ./data:/app/data
+
+    restart: always
+
+    # Healthcheck agar Docker tahu kapan container siap
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s   # TF butuh waktu load model saat startup
