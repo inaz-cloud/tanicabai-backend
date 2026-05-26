@@ -1,8 +1,11 @@
 ---
 title: Tanicabai Backend
-emoji: ???
+emoji: 🌿
 colorFrom: green
 colorTo: red
 sdk: docker
 pinned: false
 ---
+
+# Tanicabai Backend API
+FastAPI backend untuk aplikasi Tanicabai.
