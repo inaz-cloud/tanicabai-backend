@@ -49,7 +49,7 @@ except AttributeError:
 # Prediksi di bawah nilai ini dianggap "tidak yakin"
 # =========================================================
 
-CONFIDENCE_THRESHOLD = 0.60   # 60%
+CONFIDENCE_THRESHOLD = 0.85   # 85%
 
 # =========================================================
 # DIRECTORY SETUP
@@ -68,6 +68,7 @@ MODEL_DIR = os.path.join(ROOT_DIR, "models")
 # =========================================================
 
 POSSIBLE_MODELS = [
+    "best_model_multirun.keras",
     "modeldeteksi_fixed.keras",
     "best_model.keras",
     "modeldeteksi.keras",
